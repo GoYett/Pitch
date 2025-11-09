@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yett — Offline Shopping Discovery & Engagement</title>
-  <!-- Replace the tokens like {{IOS_LINK}} with your actual URLs -->
-  <!-- Brand Font -->
+  <title>Yett Concierge:ShopForMe | Investor Overview</title>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -20,10 +18,10 @@
       --radius:18px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Archivo,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--yett-cream),#fff);}
+    html,body{margin:0;padding:0;font-family:Archivo,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--yett-cream),#fff) fixed;}
     a{color:var(--yett-blue);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1040px;margin:0 auto;padding:24px}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
     .hero{
       background: radial-gradient(1200px 600px at 90% -10%, rgba(91,124,253,.18), transparent 60%),
                   radial-gradient(900px 500px at -10% 10%, rgba(26,148,97,.10), transparent 60%),
@@ -32,277 +30,354 @@
       border-radius:calc(var(--radius) + 6px);
       padding:40px 28px;
       box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
-    .badge{display:inline-block;background:rgba(91,124,253,.12);color:var(--yett-blue);border:1px solid rgba(91,124,253,.35);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;letter-spacing:.3px;text-transform:uppercase}
-    h1{font-size:32px;line-height:1.15;margin:14px 0 10px}
-    .sub{color:var(--muted);font-size:16px;line-height:1.6;margin:6px 0 0}
+    .badge{display:inline-block;background:rgba(91,124,253,.12);color:var(--yett-blue);border:1px solid rgba(91,124,253,.35);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.3px;text-transform:uppercase}
+    h1{font-size:36px;line-height:1.15;margin:14px 0 6px}
+    .sub{color:var(--muted);font-size:16px;line-height:1.65;margin:6px 0 0}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .btn{
       display:inline-flex;align-items:center;gap:10px;
       padding:12px 16px;border-radius:14px;border:1px solid var(--ring);
-      background:#fff;font-weight:600;box-shadow:0 2px 0 rgba(0,0,0,.04);
+      background:#fff;font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.04);
       transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+      cursor:pointer;
     }
     .btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(16,24,40,.10)}
     .btn.primary{background:var(--yett-blue);color:#fff;border-color:transparent}
     .btn.success{background:var(--yett-green);color:#fff;border-color:transparent}
-    .grid{display:grid;gap:18px;margin-top:24px}
-    @media (min-width:900px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
-    .card{
-      background:var(--card);border:1px solid var(--ring);border-radius:var(--radius);
-      padding:22px;box-shadow:var(--shadow)
-    }
-    .card h3{margin:0 0 10px;font-size:18px}
-    .list{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted);line-height:1.7}
-    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
-    @media (min-width:700px){ .stats{grid-template-columns:repeat(4,1fr)} }
-    .stat{
-      background:#fff;border:1px solid var(--ring);border-radius:14px;padding:16px;text-align:center
-    }
-    .kpi{font-size:22px;font-weight:700;color:var(--ink)}
-    .kcap{font-size:12px;color:var(--muted);margin-top:2px}
-    .section{margin-top:30px}
-    .section h2{font-size:22px;margin:0 0 10px}
-    .foot{
-      margin:38px 0 10px;padding:22px;border:1px dashed rgba(15,23,42,.18);
-      border-radius:16px;background:#fff
-    }
-    .footer{
-      margin-top:26px;padding:24px 0;border-top:1px solid var(--ring);color:var(--muted);font-size:14px
-    }
-    .f-links{display:flex;gap:14px;flex-wrap:wrap}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--ring)}
+    .section{margin-top:32px}
+    .section h2{font-size:24px;margin:0 0 10px}
+    .grid{display:grid;gap:18px;margin-top:12px}
+    @media (min-width:960px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .list{margin:8px 0 0;padding:0 0 0 18px;color:var(--muted);line-height:1.75}
+    .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media (min-width:720px){ .kpis{grid-template-columns:repeat(4,1fr)} }
+    .kpi{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:14px;text-align:center}
+    .kpi .num{font-size:24px;font-weight:800}
+    .kpi .cap{font-size:12px;color:var(--muted);margin-top:2px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--ring);font-weight:600}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .chip{background:rgba(26,148,97,.10);color:var(--yett-green);border:1px solid rgba(26,148,97,.35);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px}
+    .table{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px}
+    .table th,.table td{padding:12px;border-top:1px solid var(--ring);text-align:left;font-size:14px}
+    .table th{font-size:13px;text-transform:uppercase;letter-spacing:.3px;color:#334155;background:#f8fafc}
+    .callout{border:1px dashed rgba(15,23,42,.25);padding:16px;border-radius:16px;background:#fff}
+    .foot{margin:38px 0 10px;padding:22px;border:1px dashed rgba(15,23,42,.18);border-radius:16px;background:#fff}
+    .footer{margin-top:26px;padding:24px 0;border-top:1px solid var(--ring);color:var(--muted);font-size:14px;text-align:center}
     .mono{font-variant-numeric:tabular-nums}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-    .chip{background:rgba(26,148,97,.10);color:var(--yett-green);border:1px solid rgba(26,148,97,.35);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .nav a{font-size:13px}
+    .toc{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .toc a{display:inline-block;padding:8px 10px;border-radius:12px;border:1px solid var(--ring);background:#fff;font-weight:600;font-size:13px}
+    .tagline{font-size:18px;font-weight:700;margin-top:8px}
+    .checklist{list-style:none;padding:0;margin:8px 0 0 0}
+    .checklist li{display:flex;gap:8px;align-items:flex-start;margin:8px 0;color:#334155}
+    .check{width:18px;height:18px;border-radius:6px;background:rgba(26,148,97,.12);border:1px solid rgba(26,148,97,.45);display:inline-flex;align-items:center;justify-content:center;font-size:14px;color:var(--yett-green);line-height:1}
+    .warn{background:rgba(244,63,94,.08);border-color:rgba(244,63,94,.35);color:#be123c}
+    .muted{color:#64748b}
+    .anchor{scroll-margin-top:80px}
   </style>
 </head>
 <body>
   <div class="container">
+
+    <!-- HERO -->
     <header class="hero">
-      <span class="badge">About Yett</span>
-      <h1>Your gateway to citywide offline shopping </h1>
+      <span class="badge">Investor Overview</span>
+      <h2>Yett Concierge:ShopForMe</h2>
+      <div class="tagline">• We live shop for you </br>• We ship for you </br>• We go the extra mile for you</div>
       <p class="sub">
-        Yett connects shoppers with local retailers. Think <strong>Zomato Dining Out</strong> — but for
-        <em>fashion, lifestyle, and home décor</em>. Yett mirror's the physical shopping landscape (malls, hubs, standalone stores)
-        into structured categories that shoppers can explore with a single tap.
+        Yett Concierge is built for expatriates and the diaspora community who want to shop from real Indian markets for utility, nostalgia, gifting, and cultural connection.
+        We bring <strong>authentic offline stores</strong> to them with a human selecting in real stores. A <strong>service‑led</strong> model,
+        that bridges Indian markets, boutiques, and craftsmanship to expatriates via a Personal Shopping Agent.
       </p>
-      <p class="sub" style="margin-top:8px">
-        Our goal isn’t to pull people online ,but to add a <strong>digital layer</strong> to offline shopping, retaining its charm while enriching it.
-      </p>
-      <div class="cta" aria-label="Download and explore">
-        <a class="btn primary" href="https://apps.apple.com/in/app/yett-gateway-to-shopping/id6745514671" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.1 6.3c1-.1 2-.6 2.7-1.4c.7-.8 1.1-1.9 1.1-2.9c-1 .1-2 .6-2.8 1.4c-.7.8-1.1 1.8-1 2.9zM20.3 17.2c-.7 1.7-1.6 3.4-2.8 3.4c-1.2 0-1.6-.8-3-.8c-1.4 0-1.9.8-3 .8c-1.2 0-2.1-1.6-2.9-3.3c-.9-1.9-1.6-4.8-.7-7c.8-1.8 2.5-3 4.4-3.1c1.2 0 2.3.8 3 .8c.7 0 2-.9 3.4-.8c.6 0 2.3.2 3.3 1.8c-.1.1-2 1.2-1.9 3.6c.1 2.9 2.5 3.8 2.6 3.9z"/></svg>
-          <span>Download on iOS</span>
-        </a>
-        <a class="btn success" href="https://play.google.com/store/apps/details?id=com.yett.app" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 9.48A1.5 1.5 0 1 1 16.1 8a1.5 1.5 0 0 1 1.5 1.48m-9.7 0A1.5 1.5 0 1 1 6.4 8a1.5 1.5 0 0 1 1.5 1.48M6 9.9h12v7.9a1.2 1.2 0 0 1-1.2 1.2H7.2A1.2 1.2 0 0 1 6 17.8zm11.9-3.6l1.3-2.2a.5.5 0 1 0-.87-.5L17 5.9a7.1 7.1 0 0 0-10 0L5.7 3.6a.5.5 0 1 0-.88.5l1.3 2.2A7 7 0 0 0 12 8.1a7 7 0 0 0 5.9-1.8Z"/></svg>
-          <span>Get it on Android</span>
-        </a>
-        <a class="btn" href="https://www.youtube.com/shorts/9UJp_Q4kCCU" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m8 5l11 7L8 19z"/></svg>
-          <span>App Walkthrough</span>
-        </a>
+      <div class="toc">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#how">How it works</a>
+        <a href="#whynow">Why now</a>
+        <a href="#yett">What Yett does</a>
+        <a href="#market">Market</a>
+        <a href="#diff">Differentiation</a>
+        <a href="#model">Business Model</a>
+        <a href="#usefunds">Ask & Use of Funds</a>
+        <a href="#whyus">Why us</a>
+        <a href="#contact">Contact</a>
       </div>
+     
     </header>
 
-
-
-     <!-- New Section: Problems Faced by Shoppers and Businesses -->
-    <section class="section">
-      <h2>Problems Faced by Shoppers</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Discovery Gaps</h3>
-          <ul class="list">
-            <li>Consumers struggle to discover local deals and often face inconsistent, inconvenient shopping journeys.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Lack of Trusted Local Offers</h3>
-          <ul class="list">
-            <li>Most platforms promote mass offers; there is no trusted destination for curated local store discounts.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Missing Digital Layer</h3>
-          <ul class="list">
-            <li>Unlike online shopping, physical retail lacks a seamless, privacy-conscious digital layer that enhances the offline shopping journey.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Problems Faced by Businesses</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Low Visibility</h3>
-          <ul class="list">
-            <li>Low visibility and engagement on online algorithm-driven platforms make it difficult to stand out.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Unpredictable Footfalls</h3>
-          <ul class="list">
-            <li>Businesses face unpredictable footfalls and struggle with low customer lifetime value.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Fragmented Digital Presence</h3>
-          <ul class="list">
-            <li>Brands struggle to maintain their own websites while shoppers prefer a unified, low-maintenance platform.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- End of New Section -->
-
-    <section class="section">
-      <h2>What We’ve Built-Yett operates across three layers</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Consumer App</h3>
-          <ul class="list">
-            <li>Offline discovery & engagement</li>
-            <li>Explore malls, hubs & stores</li>
-            <li>Clean, category-first browsing</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Merchant Dashboard</h3>
-          <ul class="list">
-            <li>Brand storytelling & media</li>
-            <li>Offers, events & shopper analytics</li>
-            <li>Easy onboarding & updates</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>LLM-Optimized Backend (Yett 2.0)</h3>
-          <ul class="list">
-            <li>AI-powered offline shopping chatbot</li>
-            <li>My Yett: curated journeys (wedding, home, deals, city)</li>
-            <li>Search & discoverability across AI platforms</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Our Progress So Far</h2>
-      <div class="stats">
-        <div class="stat">
-          <div class="kpi mono">25,000+</div>
-          <div class="kcap">Downloads (3 months)</div>
-        </div>
-        <div class="stat">
-          <div class="kpi mono">15,000+</div>
-          <div class="kcap">Monthly Active Users</div>
-        </div>
-        <div class="stat">
-          <div class="kpi mono">3m 30s</div>
-          <div class="kcap">Avg. Engagement Time</div>
-        </div>
-        <div class="stat">
-          <div class="kpi mono">2,000+</div>
-          <div class="kcap">Stores Live</div>
-        </div>
-      </div>
-
-      <div class="grid cols-2" style="margin-top:18px">
-        <div class="card">
-          <h3>City Footprint</h3>
-          <p class="sub">Lucknow, Jaipur, Agra, Indore, Varanasi</p>
-          <div class="chips" aria-label="Mall partnerships">
-            <span class="chip">Jaipur: 4 malls</span>
-            <span class="chip">Lucknow: 6 malls</span>
-            <span class="chip">Agra: 1 mall</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Growth Motions</h3>
-          <ul class="list">
-            <li>Offline activations in malls & marketplaces</li>
-            <li>Yett 2.0 rolling out mid-November</li>
-            <li>Revenue generation began September</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- New Section: Pricing & Monetisation Strategy -->
-    <section class="section">
-      <h2>Pricing & Monetisation Strategy</h2>
-      <p class="sub"><strong>Multiple Revenue Streams for Sustainable Growth</strong></p>
-
-      <div class="grid cols-3">
-        
-
-        <div class="card">
-          <h3>Merchant Subscriptions and Seasonal Campaigns</h3>
-          <ul class="list">
-            <li>Tiered subscription plans for different merchant sizes.</li>
-            <li><strong>Pro Plan:</strong> ₹499/month (single stores)</li>
-            <li><strong>Growth Plan:</strong> ₹1,499/month (multi-location)</li>
-            <li><strong>Enterprise:</strong> ₹2,999/month (malls, large retailers)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Advertising Revenue</h3>
-          <ul class="list">
-            <li>Featured listings and banner ads</li>
-            <li>Sponsored content and promotions</li>
-            <li>Brand partnership campaigns</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid cols-2" style="margin-top:18px">
-        <div class="card">
-          <h3>Data Monetisation</h3>
-          <ul class="list">
-            <li>Valuable insights from shopping behaviour and trends.</li>
-            <li><strong>Data Insights:</strong> Anonymous market intelligence reports for retailers and brands.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- End of Pricing & Monetisation Strategy -->
-
-    <section class="section">
+    <!-- PROBLEM -->
+    <section id="problem" class="section anchor">
+      <h2>The Problem</h2>
       <div class="grid cols-2">
         <div class="card">
-          <h3>What’s Next — Yett 2.0</h3>
+          <h3>What expatriates face today</h3>
           <ul class="list">
-            <li>AI-powered offline shopping chatbot</li>
-            <li>My Yett journeys: wedding shopping, home setup, deal hunting, city exploration</li>
-            <li>Deeper merchant tools & analytics</li>
+            <li>Lack of reliable digital access to <strong>authentic Indian offline retail</strong></li>
+            <li>Poor trust in quality when buying from India online</li>
+            <li>No one to verify products in‑person</li>
+            <li>High risk of fakes & wrong items</li>
+            <li>Heavy international shipping complexity</li>
+          </ul>
+          <p class="sub"><strong>They want</strong> trust, curation, quality verification, and <em>real shopping from real stores</em>. No platform solves this at scale.</p>
+        </div>
+        <div class="card">
+          <h3>Categories expats ask for</h3>
+          <div class="chips">
+            <span class="chip">Local crafts</span>
+            <span class="chip">Bridalwear</span>
+            <span class="chip">Jewellery</span>
+            <span class="chip">Handicrafts</span>
+            <span class="chip">Festive shopping</span>
+            <span class="chip">Gifting</span>
+            <span class="chip">Regional boutiques</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution" class="section anchor">
+      <h2>Yett Global Concierge</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Your personal shopper in India, offering a live, curated, authentic experience</h3>
+          <ul class="list">
+            <li>Live agent visits <strong>verified stores & artisans</strong></li>
+            <li>Video call, photos, and chat for selection & quality checks</li>
+            <li><strong>Escrow‑protected</strong> checkout; no‑return, fully traceable flow</li>
+            <li>Transparent invoices + AI dashboard for <strong>comparative pricing</strong> (flags &gt;20% deviation)</li>
+            <li>End‑to‑end global shipping: duty, tracking, support managed by Yett</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Team Snapshot</h3>
+          <h3>How it works</h3>
+          <ol class="list" style="margin-left:18px;">
+            <li>Expat chooses city & categories (Lucknow, Jaipur, Varanasi & more)</li>
+            <li>Sees Brand of the Week, ODOP & local crafts, curated stores</li>
+            <li>Selects a store from the list or via product search</li>
+            <li>Books an agent with an optional shopping note → appointment scheduled</li>
+            <li>Agent visits store → video/photos & chat for selections</li>
+            <li>Shopper confirms → pays into escrow</li>
+            <li>Yett buys, packs, and ships globally → duty & tracking handled</li>
+          </ol>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:12px">
+        <strong>Checks & Safeguards:</strong> Escrow, AI‑based price deviation flags, transparent bills, full traceability.
+      </div>
+    </section>
+
+    <!-- WHY NOW -->
+    <section id="whynow" class="section anchor">
+      <h2>Why Now</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Structural tailwinds</h3>
           <ul class="list">
-            <li>Business Development: 5 members</li>
-            <li>Content & Strategy: 3 members</li>
+            <li><strong>35M+</strong> overseas Indians; 5.4M in the USA alone; high disposable income & cultural nostalgia</li>
+            <li>Post‑Covid comfort with <strong>remote, video‑led shopping</strong> and concierge services</li>
+            <li>Shift from e‑commerce to <strong>curated commerce</strong>, especially for high‑value purchases</li>
+            <li><strong>White space</strong>: no scaled solution combining offline Indian retail + live human selection + global delivery</li>
+            <li>Cross‑border commerce growing <strong>&gt;20% YoY</strong>; Tier‑2 digitization accelerating where Yett has on‑ground presence</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Yett’s readiness</h3>
+          <ul class="list">
+            <li>2,000+ stores onboarded; deep Tier‑2/3 networks</li>
+            <li>Content engine (blogs, reels) and BD network already running in 5 indian cities</li>
+            <li>Consumer app + merchant tools + LLM backend (Yett 2.0)</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Resources to Explore</h2>
+    <!-- WHAT YETT DOES -->
+    <section id="yett" class="section anchor">
+      <h2>What Yett Does & Why Concierge Fits</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Discovery layer for offline stores</h3>
+          <ul class="list">
+            <li> Yett is building the discovery layer for offline stores by cataloguing them, bringing them online city-wise,hub-wise and mall-wise and helping shoppers discover boutiques, brands, and markets that had low voice and visibility online.</li>
+            <li>Helps shoppers discover boutiques, brands, and markets with low digital voice</li>
+            <li>Enriches the offline experience: Its your gateway to citywide offline shopping</li>
+<li>It can also act as a gateway for expatriates to do the same</li>
+
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Same infra, new customer</h3>
+          <ul class="list">
+            <li>Concierge = same Yett supply; <strong>new demand</strong> (global diaspora)</li>
+            <li>Same stores, categories, brand pages, catalogues, BD network</li>
+            <li>Richer content for expats (blogs, reels, guides)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:12px">
+        <strong>10× Supply Value:</strong> Every onboarded store now serves both domestic shoppers and 35M+ global Indians — boosting retention, subscriptions, engagement, and digitization willingness.
+      </div>
+    </section>
+
+    <!-- MARKET -->
+    <section id="market" class="section anchor">
+      <h2>Market Opportunity</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr><th>Segment</th><th>Market Size (2025)</th><th>Yett Reach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Indian Diaspora Retail</td><td>$3 Bn</td><td>Target 1% = $30 Mn</td></tr>
+              <tr><td>Tier‑2 Handicrafts Exports</td><td>$2.5 Bn</td><td>Target 0.5% = $12 Mn</td></tr>
+              <tr><td>Wedding & Festive Gifting</td><td>$1 Bn</td><td>Target 1% = $10 Mn</td></tr>
+            </tbody>
+          </table>
+          <p class="sub"><strong>TAM:</strong> $6.5 Bn &nbsp; • &nbsp; <strong>SAM:</strong> $800 Mn &nbsp; • &nbsp; <strong>SOM (3‑yr goal):</strong> $15–20 Mn GMV</p>
+        </div>
+        <div class="card">
+          <h3>Current traction (Yett core)</h3>
+          <div class="kpis">
+            <div class="kpi"><div class="num">25,000+</div><div class="cap">Downloads (3 mo)</div></div>
+            <div class="kpi"><div class="num">15,000+</div><div class="cap">Monthly Active Users</div></div>
+            <div class="kpi"><div class="num">3m 30s</div><div class="cap">Avg. Engagement</div></div>
+            <div class="kpi"><div class="num">2,000+</div><div class="cap">Stores Live</div></div>
+          </div>
+          <div class="chips" style="margin-top:10px">
+            <span class="chip">Mall partners: Jaipur 4</span>
+            <span class="chip">Lucknow 6</span>
+            <span class="chip">Agra 1</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIATION -->
+    <section id="diff" class="section anchor">
+      <h2>How We Differ</h2>
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr><th>Area</th><th>Traditional Exporters</th><th>Yett Concierge</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Source</td><td>Wholesalers</td><td>Verified retail stores & artisans</td></tr>
+            <tr><td>Transparency</td><td>None</td><td>Live video + OCR invoices</td></tr>
+            <tr><td>Trust</td><td>Weak</td><td>Escrow + agent tracking</td></tr>
+            <tr><td>UX</td><td>Offline coordination</td><td>In‑app “Shop from India”</td></tr>
+            <tr><td>Compliance</td><td>Manual</td><td>Automated anti‑collusion dashboard</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BUSINESS MODEL -->
+    <section id="model" class="section anchor">
+      <h2>Business Model</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Tangible revenue</h3>
+          <ul class="list">
+            <li>Concierge fee (fixed)</li>
+            <li>Courier markup / delivery fees (10–15%)</li>
+            <li>Store subscriptions & ads</li>
+            <li>Add‑ons: fast‑track agent visit, gift wrapping</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Strategic value</h3>
+          <ul class="list">
+            <li>High‑affinity expat community</li>
+            <li>Dual‑market stores → higher retention & digitization</li>
+            <li>Category leadership: “Shop the real India”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK & USE OF FUNDS -->
+    <section id="usefunds" class="section anchor">
+      <h2>Ask & Use of Funds</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Raise</h3>
+          <p class="sub">₹2.5 Cr round</p>
+          <h3 style="margin-top:10px">Target</h3>
+          <p class="sub">$2 Mn annualized GMV by Q4 2026</p>
+        </div>
+        <div class="card">
+          <h3>Use of funds</h3>
+          <ul class="list">
+            <li>30% --> Concierge agent network (expand to 15 cities by end‑2026)</li>
+            <li>30% -->Diaspora marketing</li>
+            <li>20% -->Technology & escrow automation</li>
+            <li>10% -->Logistics & compliance infrastructure</li>
+            <li>10% -->Contingency</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="whyus" class="section anchor">
+      <h2>Why We’ll Win</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <ul class="list">
+            <li>Deep city‑level store network (Tier‑2/3 stronghold; 2,000+ stores)</li>
+            <li>Hybrid model: human warmth + tech transparency</li>
+            <li>Cultural storytelling: <em>Shop the real India</em></li>
+            <li>Team with tech expertise & proven cross‑border selling at scale</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Key geos & categories</h3>
+          <div class="chips">
+            <span class="chip">Lucknow</span><span class="chip">Jaipur</span><span class="chip">Varanasi</span>
+            <span class="chip">Agra</span><span class="chip">Bridal</span><span class="chip">Jewellery</span>
+            <span class="chip">Handicrafts</span><span class="chip">Festive</span><span class="chip">Gifting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section foot anchor">
+       <section class="section foot">
+      <h2 style="margin-top:0">Let’s Connect</h2>
+      <p class="sub">I’d love to walk you through our journey, pitch deck, and future P&amp;L roadmap — and hear your feedback.</p>
+      <div class="cta" style="margin-top:12px">
+        <a class="btn primary" href="mailto:nikhil@yett.in">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5z"/><path fill="currentColor" d="M4 8v10h16V8l-8 5z" opacity=".5"/></svg>
+          <span>Email Us</span>
+        </a>
+        </a>
+      </div>
+    </section>
+      
+      
+    </section>
+
+<section class="section">
+      <h2>Resources to Explore of Yett so far</h2>
       <div class="grid cols-3">
         <div class="card">
-          <h3>App Explainer video 2</h3>
+          <h3>App Explainer video 1</h3>
           <p class="sub">See Yett’s core flows in under a minute.</p>
           <p><a href="https://www.youtube.com/watch?v=yaeHehft7zA" target="_blank" rel="noopener">Watch on YouTube →</a></p>
         </div>
         <div class="card">
-          <h3>Independence Day Reel (1 min)</h3>
+          <h3>Explainer video 2 (1 min)</h3>
           <p class="sub">A glimpse into our brand voice & vibe.</p>
-          <p><a href="https://www.youtube.com/shorts/yZVlfKuhamk" target="_blank" rel="noopener">Watch on YouTube →</a></p>
+          <p><a href="https://www.youtube.com/shorts/9UJp_Q4kCCU" target="_blank" rel="noopener">Watch on YouTube →</a></p>
         </div>
         <div class="card">
           <h3>Yett Rap (1 min)</h3>
@@ -311,20 +386,7 @@
         </div>
       </div>
     </section>
-
-    <section class="section foot">
-      <h2 style="margin-top:0">Let’s Connect</h2>
-      <p class="sub">I’d love to walk you through our journey, pitch deck, and future P&amp;L roadmap — and hear your feedback.</p>
-      <div class="cta" style="margin-top:12px">
-        <a class="btn primary" href="mailto:{{nikhil@yett.in}}">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5z"/><path fill="currentColor" d="M4 8v10h16V8l-8 5z" opacity=".5"/></svg>
-          <span>Email Us</span>
-        </a>
-        </a>
-      </div>
-    </section>
-
-    <footer class="footer">
+<footer class="footer">
       <div class="f-links" aria-label="Footer links">
         <span class="pill">
           <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm0 18a7.94 7.94 0 0 1-4.9-1.7l10.2-10.2A8 8 0 0 1 12 20Zm6.9-3.1L8.8 6.8A8 8 0 0 1 18.9 16.9Z"/></svg>
@@ -352,12 +414,3 @@
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
